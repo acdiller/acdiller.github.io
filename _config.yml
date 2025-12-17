@@ -14,6 +14,10 @@ name                     : "Abigail Diller"
 repository               : "acdiller/acdiller.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+# masthead_title           : "home" # overrides the website title displayed in the masthead, use " " for no title
+
+atom_feed:
+  hide: true
 
 # Site footer
 footer:
@@ -36,6 +40,7 @@ minimal_mistakes_skin: "neon"
 include:
   - .htaccess
   - _pages
+  - _pages/portfolio-items
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -99,12 +104,12 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/Detroit
 
 # pagination
 pagination:
   # Set enabled to true to use paginate v2
-  # enabled: true
+  enabled: true
   debug: false
   collection: 'posts'
   per_page: 5
@@ -151,13 +156,14 @@ defaults:
       path: ""
       type: pages
     values:
-      layout: single
+      layout: splash
   # _posts
   - scope:
       path: ""
       type: posts
     values:
       layout: single
+      show_date: true
       author_profile: false
       read_time: false
       comments: false
