@@ -106,10 +106,16 @@ sass:
 permalink: /:categories/:title/
 timezone: America/Detroit
 
+
+# Pagination with jekyll-paginate
+paginate: 5 # amount of posts to show
+paginate_path: /posts/page:num/
+
+
 # pagination
 pagination:
   # Set enabled to true to use paginate v2
-  enabled: true
+  # enabled: true
   debug: false
   collection: 'posts'
   per_page: 5

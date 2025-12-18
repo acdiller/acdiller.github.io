@@ -19,12 +19,12 @@
 <figure class="{{ gallery_layout }} {{ include.class }}">
   {% for img in gallery %}
     {% if img.url %}
-      <a href="{{ img.url | relative_url }}"
+      <a href="{{ img.url | relative_url }}" style="text-decoration: none"
         {% if img.title %}title="{{ img.title | escape_once }}"{% endif %}>
           <img src="{{ img.image_path | relative_url }}"
                alt="{% if img.alt %}{{ img.alt | escape_once }}{% endif %}">
           {% if img.caption %}
-            <figcaption style="text-align: left; font-style: italic">{{ img.caption | escape_once }}</figcaption>
+            <figcaption style="margin-top: -3%; text-align: left; font-style: italic; font-size: 100%">{{ img.caption | escape_once }}</figcaption>
           {% endif %}
       </a>
     {% else %}
