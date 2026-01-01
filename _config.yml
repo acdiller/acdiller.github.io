@@ -1,23 +1,28 @@
+# theme settings
+remote_theme: "mmistakes/minimal-mistakes@4.27.3"
+minimal_mistakes_skin: "neon"
+
+# primary site settings
+locale: "en-US"
 title: abigail diller
-email: dillerab@mail.gvsu.edu
-description: >-
-  personal website & portfolio
+title_separator: "|"
+subtitle: # site tagline that appears below site title in masthead
+name: abigail diller
+description: personal website & portfolio
 url: https://acdiller.github.io
-github_username:  acdiller
+repository: "acdiller/acdiller.github.io"
+github_username: acdiller
 
-
-# Other site settings
-locale                   : "en-US"
-title_separator          : "|"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Abigail Diller"
-repository               : "acdiller/acdiller.github.io"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo: # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 # masthead_title           : "home" # overrides the website title displayed in the masthead, use " " for no title
 
 atom_feed:
-  hide: true
+  hide: true  # hide header/footer RSS icon
+
+# site scripts
+head_scripts:
+  - https://cdn.jsdelivr.net/npm/p5@2.1.1/lib/p5.js
 
 # Site footer
 footer:
@@ -29,11 +34,6 @@ footer:
       # icon: "fab fa-fw fa-instagram"
       # url:
   since: "2025"
-
-
-# theme settings
-remote_theme: "mmistakes/minimal-mistakes@4.27.3"
-minimal_mistakes_skin: "neon"
 
 
 # Reading Files
@@ -102,34 +102,14 @@ sass:
   style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
 
-# Outputting
+# Outputting - permalink style
 permalink: /:categories/:title/
 timezone: America/Detroit
 
 
 # Pagination with jekyll-paginate
-paginate: 5 # amount of posts to show
+paginate: 5 # posts per page
 paginate_path: /posts/page:num/
-
-
-# pagination
-pagination:
-  # Set enabled to true to use paginate v2
-  # enabled: true
-  debug: false
-  collection: 'posts'
-  per_page: 5
-  permalink: '/page/:num/'
-  title: ':title - page :num'
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true
-  category: 'posts'
-  tag: ''
-  locale: ''
-  trail:
-    before: 2
-    after: 2
 
 
 plugins:
@@ -138,7 +118,6 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
-
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -149,6 +128,7 @@ whitelist:
   - jekyll-include-cache
 
 
+# HTML Compression
 compress_html:
   clippings: all
   ignore:
