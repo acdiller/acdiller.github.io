@@ -4,11 +4,15 @@ layout: default
 <!-- https://stackoverflow.com/questions/36563791/load-random-js-file-on-page-load-or-refresh -->
 <div style="display: flex; width: 100%; height: 80vh; justify-content: center; align-items: center; margin-top: 1%">
   <div id="canvas-container" style="width: 85%; height: 95%;">
-    <script src="assets/js/ff.js"></script>
   </div>
 </div>
 
-<h1 style="text-align: center">ABOUT</h1>
-<p style="text-align: center">
-  work in progress
-</p>
+<script>
+  const p5sketches = ["eca.js", "ff.js"];
+  let i = Math.floor(Math.random() * p5sketches.length);
+  let sketchFile = p5sketches[i];
+  const script = document.createElement("script");
+  script.src = "assets/js/" + sketchFile;
+  document.body.appendChild(script);
+
+</script>
